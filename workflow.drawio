@@ -1,0 +1,153 @@
+<mxfile host="65bd71144e">
+    <diagram id="7XqcnsdjfsjvH6pvEtui" name="第 1 页">
+        <mxGraphModel dx="1049" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="1" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="23" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Comic Sans MS&quot;&gt;Source Data&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="100" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="3" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;Experiment Data&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="386.25" y="100" width="407.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="源数据趋势识别" style="swimlane;whiteSpace=wrap;html=1;rounded=1;swimlaneLine=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=bottom;fontSize=14;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="170" width="230" height="370" as="geometry">
+                        <mxRectangle x="70" y="150" width="140" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="4" source="8" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;使用样条/傅里叶方法表示基函数&lt;/font&gt;&amp;nbsp;$$f^{(s)}(t)=X(t)^\top \beta^{(s)}$$" style="rounded=1;fontFamily=Comic Sans MS;spacing=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;verticalAlign=bottom;fontSize=12;" vertex="1" parent="4">
+                    <mxGeometry x="5" y="40" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="$$Y^{(s)}_{d,k,t}=f^{(s)}_k(t)+\eta^{(s)}_{d,k,t}+\epsilon^{(s)}_{d,k,t}$$" style="rounded=1;fontFamily=Comic Sans MS;spacing=0;whiteSpace=wrap;html=1;strokeColor=none;glass=0;fillColor=none;fontSize=12;" vertex="1" parent="4">
+                    <mxGeometry x="10" y="320" width="210" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="4" source="12" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;使用阶段化自回归递推&lt;/font&gt; $$\eta^{(s)}_{k,t}=\lambda^{(s)}_k\eta^{(s)}_{t-1}+v^{(s)}_{k,t}$$" style="rounded=1;fontFamily=Comic Sans MS;spacing=0;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#dae8fc;strokeColor=none;glass=0;shadow=0;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=middle;align=center;horizontal=1;fontSize=12;" vertex="1" parent="4">
+                    <mxGeometry x="5" y="130" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="4" source="14" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;确定误差项方差&lt;/font&gt; $$v^{(s)}\sim N(0,\Psi^{(s)}), \epsilon^{(s)}\sim N(0,\Sigma^{(s)})$$" style="rounded=1;fontFamily=Comic Sans MS;spacing=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;fillStyle=auto;verticalAlign=bottom;horizontal=1;fontSize=12;" vertex="1" parent="4">
+                    <mxGeometry x="5" y="230" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="实验期数据拟合" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;fontFamily=Comic Sans MS;fontSize=14;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="170" width="640" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="22" source="47" target="56">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="200" y="190" as="sourcePoint"/>
+                        <mxPoint x="250" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="EM迭代拟合" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;fontFamily=Comic Sans MS;fontSize=14;" vertex="1" parent="22">
+                    <mxGeometry y="35" width="350" height="335" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=none;html=1;fontSize=12;" edge="1" parent="33" source="35" target="36">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;E-step：计算潜在状态的后验矩&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;&amp;nbsp;\begin{aligned} \widetilde m_d = \mathbb E(v_d\mid Y_d,A_d;\Omega^{(m-1)}),\\ \widetilde S_d = \mathbb V (v_d\mid Y_d,A_d;\Omega^{(m-1)}) \end{aligned}&amp;nbsp;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#fff2cc;strokeColor=none;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="33">
+                    <mxGeometry x="15" y="120" width="265" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;M-step：GLS下最大似然更新待估参数&lt;/font&gt;&lt;div&gt;$$ \Omega^{(m)}=\{\beta^{(m)},\lambda^{(m)},vec(\Sigma^{(m)}),vec(\Psi^{(m)})\} $$&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fillColor=#fff2cc;strokeColor=none;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="33">
+                    <mxGeometry x="15" y="230" width="265" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="33" source="37" target="35">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;使用Source Data初始化参数&lt;/font&gt;&lt;div&gt;$$ \Omega^{(0)}=\{\beta^{(0)},\lambda^{(0)},vec(\Sigma^{(0)}),vec(\Psi^{(0)})\} $$&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fillColor=#fff2cc;strokeColor=none;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="33">
+                    <mxGeometry x="15" y="30" width="265" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&amp;nbsp;三重联合收敛准则&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;+判定计数器&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=middle;fillColor=#fff2cc;strokeColor=none;fontFamily=Comic Sans MS;horizontal=0;fontSize=12;" vertex="1" parent="33">
+                    <mxGeometry x="286" y="140" width="58" height="142" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="33" source="47" target="35">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="140" y="165" as="sourcePoint"/>
+                        <mxPoint x="190" y="115" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="244" y="105"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="33" source="36" target="47">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="140" y="165" as="sourcePoint"/>
+                        <mxPoint x="190" y="115" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="244" y="315"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;拟合参数&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;$$\Omega=\{\beta,\lambda,vec(\Sigma),vec(\Psi)\} $$&lt;/span&gt;&lt;/div&gt;" style="rounded=1;html=1;verticalAlign=bottom;fillColor=#fff2cc;strokeColor=#d6b656;sketch=1;curveFitting=1;jiggle=2;glass=0;shadow=0;fontSize=12;fontFamily=Comic Sans MS;" vertex="1" parent="22">
+                    <mxGeometry x="410" y="280" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="模型设置" style="swimlane;html=1;rounded=1;align=center;verticalAlign=middle;swimlaneLine=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Comic Sans MS;fontSize=14;" vertex="1" parent="22">
+                    <mxGeometry x="360" y="35" width="280" height="235" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;趋势均值校准模型&lt;/font&gt;&lt;div&gt;$$ f_{k,a}(t)=\mu_{k,a}+\alpha_{k,a}f^{(s)}_k(t),\quad a\in\{0,1\}$$&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fillColor=#d5e8d4;strokeColor=none;fontSize=12;fontFamily=Comic Sans MS;" vertex="1" parent="28">
+                    <mxGeometry x="10" y="30" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=none;html=1;fontSize=12;" edge="1" parent="28" source="31" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;动态随机效应模型&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;$$ \eta_{d,k,t}=\lambda_{d,k,t}\eta_{d,k,t-1}+ v_{d,k,t} $$&lt;/span&gt;&lt;/div&gt;" style="rounded=1;html=1;verticalAlign=bottom;fillColor=#d5e8d4;strokeColor=none;fontSize=12;fontFamily=Comic Sans MS;" vertex="1" parent="28">
+                    <mxGeometry x="10" y="110" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="$$Y_d=X_d\beta+C_{A_d}(\lambda)v_d+\epsilon_d$$" style="rounded=1;fontFamily=Comic Sans MS;spacing=0;whiteSpace=wrap;html=1;strokeColor=none;glass=0;fillColor=none;fontSize=12;" vertex="1" parent="28">
+                    <mxGeometry y="200" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="1" source="4" target="22">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="440" y="370" as="sourcePoint"/>
+                        <mxPoint x="490" y="320" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="310" y="150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="71" value="推断结果计算" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;fontSize=14;fontFamily=Comic Sans MS;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="560" width="890" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="71" source="72" target="73">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;用估计参数计算状态惯性&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;$$&amp;nbsp;\mathbb E\{\eta_d\mid Y_d,A_d, \hat\Omega\} $$&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fillColor=#e1d5e7;strokeColor=none;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="71">
+                    <mxGeometry x="10" y="40" width="170" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="71" source="73" target="75">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;构造反事实路径&lt;/font&gt;&lt;div&gt;$$&amp;nbsp;\mathbb E\{\eta_d(\mathbf{1})-\eta_d(\mathbf{0})\mid Y_d,A_d\} $$&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fillColor=#e1d5e7;strokeColor=none;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="71">
+                    <mxGeometry x="200" y="40" width="187" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="71" source="75" target="77">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;分解总处理效应&lt;/span&gt;&lt;br&gt;&lt;div&gt;$$&amp;nbsp;\mathrm{ATE}_{\mathrm{total}}=\mathrm{ATE}_{\mathrm{fixed}}+\mathrm{ATE}_{\mathrm{carryover}} $$&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=bottom;fillColor=#e1d5e7;strokeColor=none;fontFamily=Comic Sans MS;fontSize=12;" vertex="1" parent="71">
+                    <mxGeometry x="410" y="40" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;计算RCATE及其标准误&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fontFamily=Comic Sans MS;fontSize=12;sketch=1;curveFitting=1;jiggle=2;fillColor=none;strokeColor=#9673a6;" vertex="1" parent="71">
+                    <mxGeometry x="690" y="40" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" style="edgeStyle=none;html=1;entryX=0.642;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="22" target="71">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=none;html=1;entryX=0.129;entryY=0.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4" target="71">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
